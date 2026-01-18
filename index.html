@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Be My Valentine?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <header class="marquee">
+        <span>INSERT COIN</span>
+        <span>INSERT COIN</span>
+        <span>INSERT COIN</span>
+      </header>
+
+      <section class="cabinet">
+        <div class="stickers" aria-hidden="true">
+          <div class="sticker sticker-heart">LUV</div>
+          <div class="sticker sticker-star">SPARK</div>
+          <div class="sticker sticker-cat">NYA</div>
+          <div class="sticker sticker-bow">BOW</div>
+          <div class="sticker sticker-arcade">1UP</div>
+        </div>
+        <div class="screen">
+          <div class="scanlines"></div>
+          <div class="glow"></div>
+          <div class="hud">
+            <div class="hud-item">PLAYER 1</div>
+            <div class="hud-item">HI-SCORE: 214</div>
+            <div class="hud-item">LIVES: &#10084;&#10084;&#10084;</div>
+          </div>
+
+          <div class="heart-grid" aria-hidden="true"></div>
+
+          <div class="start-card" id="startCard" role="dialog" aria-live="polite">
+            <p class="subtitle">WELCOME BABY</p>
+            <h1>Hiiiiii Surya</h1>
+            <p class="cta-line">Press Start to Begin</p>
+            <button class="btn yes" id="startBtn">START</button>
+          </div>
+
+          <div class="question-card" id="questionCard" role="dialog" aria-live="polite">
+            <p class="subtitle" id="levelLabel">LEVEL 1</p>
+            <h1 id="questionText">Will You Be My Valentine?</h1>
+            <p class="cta-line" id="questionHint">Press Yes to Say Yes</p>
+
+            <div class="button-row" id="buttonRow">
+              <button class="btn yes" id="yesBtn">YES</button>
+              <button class="btn no" id="noBtn">NO</button>
+            </div>
+          </div>
+
+          <div class="success-card" id="successCard" aria-hidden="true">
+            <p class="subtitle">LEVEL COMPLETE!</p>
+            <h2>See you on Valentine's Day!.</h2>
+            <p class="cta-line">Now select our next date quest.</p>
+            <button class="btn yes" id="restartBtn">PLAY AGAIN</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="controls">
+        <button class="chip" id="audioToggle" aria-pressed="false">
+          SOUND: OFF
+        </button>
+        <div class="chip">COINS: UNLIMITED</div>
+      </footer>
+    </main>
+
+    <canvas id="confetti"></canvas>
+    <script src="script.js"></script>
+  </body>
+</html>
